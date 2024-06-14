@@ -1,0 +1,128 @@
+.containerContact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .credInfo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.25rem;
+  }
+  .left, .right{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .credItems,
+  .credItemsphone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    width: 16.5rem;
+    font-family: var(--srijan4-font-2);
+    font-weight: bold;
+  }
+  .credText{
+    margin: 1rem 0rem;
+    color: cadetblue;
+    a{
+      cursor: pointer;
+      text-decoration: none;
+      color: cadetblue;
+  
+    }
+  }
+  .iconSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(61, 166, 176, 0.7);
+    padding: 4rem;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+  .facebookIcon {
+    width: 2.91rem;
+    height: 2.91rem;
+    color: var(--srijan4-white);
+  }
+  .instaIcon {
+    width: 2.91rem;
+    height: 2.91rem;
+    color: var(--srijan4-white);
+  }
+  .linkedinIcon {
+    width: 2.91rem;
+    height: 2.91rem;
+    color: var(--srijan4-white);
+  }
+  @media screen and (max-width: 1070px) {
+    .credInfo {
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-width: 90vw;
+      margin: 2rem auto;
+  
+    }
+    .left, .right {
+      display: flex;
+      justify-content: center;
+      margin: 1rem auto;
+  
+    }
+    .credText {
+      font-size: 1rem;
+      line-height: 1.2rem;
+  
+    }
+    .facebookIcon {
+      height: 2rem;
+      width: 2rem;
+      margin-left: 6.25rem;
+      margin-right: 0;
+    }
+    .instaIcon {
+      height: 2rem;
+      width: 2rem;
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
+    .linkedinIcon {
+      height: 2rem;
+      width: 2rem;
+      margin-right: 5.875rem;
+    }
+    .iconSection {
+      padding-bottom: 3.125rem;
+      gap: 1rem;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .credInfo {
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: 2rem 2rem;
+  
+    }
+    .left, .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 1rem;
+  
+    }
+    .credText {
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+  
+    }
+    .containerContact {
+      padding-top: 1.5rem;
+    }
+  }
+  
