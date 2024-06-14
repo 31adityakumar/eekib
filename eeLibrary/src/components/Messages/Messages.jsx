@@ -6,7 +6,7 @@ const Messages = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/contact");
+      const response = await axios.get("https://eelib.onrender.com/contact");
       console.log("Fetched users:", response.data); // Check fetched data
       setUsers(response.data);
     } catch (error) {

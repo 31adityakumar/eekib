@@ -20,7 +20,7 @@ const Contact = () => {
     }
     // Send the form data to the backend if validation passes
     try {
-      const response = await axios.post("http://localhost:8080/contact", form);
+      const response = await axios.post("https://eelib.onrender.com/contact", form);
       console.log(response.data);
       // Optionally, reset the form after successful submission
       setForm({});
