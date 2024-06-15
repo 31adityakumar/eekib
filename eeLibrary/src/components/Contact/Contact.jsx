@@ -1,8 +1,10 @@
 import styles from "./Contact.module.scss";
 import axios from "axios";
 import { useState } from "react";
+
 const Contact = () => {
   const [form, setForm] = useState({});
+  const [submissionStatus, setSubmissionStatus] = useState('');
 
   const handleForm = (e) => {
     setForm({
@@ -24,8 +26,11 @@ const Contact = () => {
       console.log(response.data);
       // Optionally, reset the form after successful submission
       setForm({});
+      // Set the submission status message
+      setSubmissionStatus('Thanks for reaching us.');
     } catch (error) {
       console.error('Error submitting form:', error);
+      setSubmissionStatus('Failed to submit the form. Please try again later.');
     }
   };
 
@@ -38,15 +43,15 @@ const Contact = () => {
         <form className={styles.form} onSubmit={handleSubmit}>
           <label>
             Name:
-            <input type="text" name="name" onChange={handleForm}></input>
+            <input type="text" name="name" value={form.name || ''} onChange={handleForm}></input>
           </label>
           <label>
             Sch ID:
-            <input type="text" name="scholar" onChange={handleForm}></input>
+            <input type="text" name="scholar" value={form.scholar || ''} onChange={handleForm}></input>
           </label>
           <label>
             Email ID:
-            <input type="email" name="email" onChange={handleForm}></input>
+            <input type="email" name="email" value={form.email || ''} onChange={handleForm}></input>
           </label>
           <label>
             Message:
@@ -55,10 +60,12 @@ const Contact = () => {
               name="message"
               rows="4"
               cols="50"
+              value={form.message || ''}
               onChange={handleForm}
             ></textarea>
           </label>
           <input type="submit" value="Submit" className={styles.submit}></input>
+        {submissionStatus && <p className={styles.submissionStatus}>{submissionStatus}</p>}
         </form>
         <div className={styles.map}>
           <iframe

@@ -52,6 +52,12 @@
     background: rgba(61, 166, 176, 0.5);
   }
 }
+.submissionStatus {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(61, 166, 176, 0.8); /* Change color as needed */
+}
 @media (max-width: 1000px) {
   .formContainer {
     flex-direction: column;
