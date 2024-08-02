@@ -1,7 +1,10 @@
-.messages{
+.messages {
+  margin: auto;
+  text-align: center;
+  .list {
     margin: auto;
-    text-align: center;
-    .list{
-        margin: auto;
+    li {
+      margin: .5rem;
     }
+  }
 }
