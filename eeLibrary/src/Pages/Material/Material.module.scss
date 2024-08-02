@@ -1,0 +1,45 @@
+.material {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+  padding: 1.5rem;
+  background: rgba(61, 166, 176, 0.1);
+}
+.head {
+  font-family: var(--srijan4-font-2);
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  background: var(--srijan4-gradient-6);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+.box {
+  text-align: center;
+  a {
+    color: #0060b6;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #00a0c6;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+.folder {
+  margin: 2rem;
+  height: 7rem;
+  width: 7rem;
+  cursor: pointer;
+}

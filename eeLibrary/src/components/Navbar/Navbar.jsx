@@ -60,7 +60,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive ? `${styles.navlinks} ${styles.active}` : styles.navlinks
             }
-            to="/services"
+            to="/material"
           >
             Material
           </NavLink>
